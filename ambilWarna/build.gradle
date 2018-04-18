@@ -1,12 +1,23 @@
 apply plugin: 'com.android.library'
 
+buildscript {
+    repositories {
+        maven { url 'https://dl.google.com/dl/android/maven2/' }
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:${BUILD_TOOLS_VERSION}"
+    }
+}
+
 android {
-    compileSdkVersion 19
-    buildToolsVersion "25.0.1"
+    compileSdkVersion 21
 
     defaultConfig {
-        minSdkVersion 8
-        targetSdkVersion 19
+        minSdkVersion 21
+        targetSdkVersion 21
     }
 
     buildTypes {
