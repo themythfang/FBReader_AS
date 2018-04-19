@@ -15,6 +15,16 @@ buildscript {
 android {
     compileSdkVersion 21
 
+
+    externalNativeBuild {
+        ndkBuild {
+            path "src/main/jni/Android.mk"
+        }
+        cmake {
+            version "3.7.1"
+        }
+    }
+
     defaultConfig {
         applicationId "org.geometerplus.zlibrary.ui.android"
         minSdkVersion 21
